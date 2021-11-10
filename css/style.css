@@ -1,0 +1,415 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;  
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.8rem;
+    text-align: center;
+}
+a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+p {
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+.dotted-hr {
+    border: dotted 6px #fff;
+    border-bottom: none;
+    margin: 20px auto;
+    width: 70px;
+}
+
+[class*="col-"]{
+    float: left;
+    padding: 10px;
+}
+
+/* for mobile */
+
+[class*="col-"] {
+    width: 100%;
+}
+ /* Navbar Section */
+.navbar {
+    background-color: #40868b;
+    padding: 1% 7%;
+    text-align: center;
+}
+
+.navbar h1 {
+    color: #fff;
+    margin: 0;
+    
+    padding-top: 10px;
+}
+
+.navbar-menu {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+
+.navbar-menu a {
+    background-color: #0c6168;
+    border-radius: 10px;
+    margin: 7px 0;
+    padding: 10px;
+}
+.navbar-menu a:hover {
+    background-color: gray;
+}
+
+.navbar::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+/*Navbar Section */
+
+ /* Profile Section */
+
+.profile {
+     padding: 130px 10px;
+     position:relative;
+     text-align: center;
+}
+
+.profile .top-weather-icon {
+    position: absolute;
+    width:120px;
+    right: 60px;
+    top: 50px;
+
+    transition: transform 2s;
+}
+
+.profile .top-weather-icon:hover {
+    transform: rotate(360deg);
+}
+
+.profile-description h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 3rem;
+}
+
+.profile-description p {
+    color: gray;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto 20px auto;
+}
+
+.profile .bottom-weather-icon {
+    position: absolute;
+    width:120px;
+    left: 60px;
+    bottom: 10px;
+
+    transition: transform 2s;
+}
+
+.profile .bottom-weather-icon:hover {
+    transform: rotate(360deg);
+}
+
+.profile::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* About Me Section */
+
+.about-me {
+    background-color: #39a48c;
+    padding: 1% 7%;
+    color: #fff;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.about-me-img img {
+    border: 5px solid #fff;
+    border-radius: 50%;
+    height: 220px;
+    width: 200px;
+}
+
+.about-me p {
+    text-align: center;
+}
+.about-me a {
+    font-size: 1.2rem;
+}
+
+
+.about-me::after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+.hire-me-btn {
+    background-color: #052d2f;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    margin: 10px;
+}
+
+/* Professional Section */
+
+.professional-experience {
+    padding: 1% 0%;
+}
+.professional-experience .card {
+    background-color: #a39e9e;
+    border-radius: 5px;
+    padding: 10px;
+    transition: 0.3s;
+    height: 600px;
+}
+
+.professional-experience .card:hover {
+    box-shadow: 0 4px 8px 5px #000;
+}
+
+.card-icon {
+    text-align: center;
+}
+
+#rounded-image {
+    border: 5px solid #fff;
+    border-radius: 50%;
+    padding: 15px;
+}
+
+.card-title h2 {
+    background-color: #616161;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.skills-container {
+    padding-right: 45px;
+}
+.skills-container li {
+    list-style: none;
+    font-weight: bolder;
+    margin: 30px 10px;
+    position: relative;
+}
+
+.skills-container li::before {
+    content: '';
+    position: absolute;
+    top: calc(100% + 5px);
+    width: 100%;
+    height: 10px;
+    left: 0;
+
+    background-color: rgb(86, 85, 153, .5);
+    border-radius: 100px;
+}
+
+.skills-container li::after {
+    content: '';
+    position: absolute;
+    top: calc(100% + 5px);
+    width: 0%;
+    height: 10px;
+    left: 0;
+
+    background-color: rgb(86, 85, 153, 1);
+    border-radius: 100px;
+
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+.skills-container li.html::after {
+    animation-name: html;
+}
+
+@keyframes html {
+    to {
+        width: 90%;
+    }
+}
+
+.skills-container li.css::after {
+    animation-name: css;
+}
+
+@keyframes css {
+    to {
+        width: 85%;
+    }
+}
+
+.skills-container li.bootstrap::after {
+    animation-name: bootstrap;
+}
+
+@keyframes bootstrap {
+    to {
+        width: 95%;
+    }
+}
+
+.skills-container li.j-query::after {
+    animation-name: j-query;
+}
+
+@keyframes j-query {
+    to {
+        width: 80%;
+    }
+}
+
+.skills-container li.javascript::after {
+    animation-name: javascript;
+}
+
+@keyframes javascript {
+    to {
+        width: 70%;
+    }
+}
+
+.skills-container li.wordpress::after {
+    animation-name: wordpress;
+}
+
+@keyframes wordpress {
+    to {
+        width: 90%;
+    }
+}
+.skills-container li.sass::after {
+    animation-name: sass;
+}
+
+@keyframes sass {
+    to {
+        width: 95%;
+    }
+}
+
+
+.professional-experience::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* Achievement Section */
+
+.achievement-contact {
+    
+    background-color: #39a4ac;
+}
+
+.contact {
+    padding: 1% 7%;
+    text-align: center;
+}
+
+.contact input, textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    resize: none;
+}
+
+.contact button {
+    border: none;
+    border-radius: 12px;
+    background-color: #052d2f;
+    color: #fff;
+    cursor: pointer;
+    padding: 15px;
+    margin: 10px;
+    width: 100px;
+}
+
+.contact-links {
+    text-align: center;
+}
+.media-button .btn {
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 32px;
+    padding: 5px;
+    margin: 10px;
+    width: 50px;
+    background-color: #fff;
+}
+
+.media-button .btn:hover {
+    background-color: gray;
+}
+
+.achievement-contact::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+/* Footer Section */
+
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.footer-menu a {
+    display: block;
+    margin: 15px 0;
+    font-size: 1rem;
+}
+
+.footer-menu a:hover{
+    color: gray;
+}
+
+.footer::after {
+    display: table;
+    content: '';
+    clear: both;
+}
